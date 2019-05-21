@@ -16,11 +16,11 @@ The app is listening by default on port 5000. The 5050 port of the host machine 
 
 ``` -p <hostPort>:<containerPort>```
 
-### Verifying that it works
+### Verifying that it works.
 
 Execute a POST on endpoint 
 
--> `localhost:5050/analyse/sentiment` or 
+-> `localhost:5050/analyse/sentiment` or  
 
 -> `<docker-machine ip>:5050/analyse/sentiment` Docker-machine ip has to be used if your OS doesn't provide native docker support. 
 
