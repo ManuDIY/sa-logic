@@ -34,14 +34,12 @@ pipeline {
                         failOnError: true,
                         rawMessage: true
                     )
-			gitlabCommitStatus(name: 'Docker build and Push'){
-                    	script {
-                        	docker.withRegistry('https://registry.linxlabs.com:5000', 'docker-cred'){
-                                	def customImage = docker.build("sa-logic:${env.BUILD_ID}")
-                                	customImage.push()
-                        		}
-                    		}
-                	}
+                    script {
+                       	docker.withRegistry('https://registry.linxlabs.com:5000', 'docker-cred'){
+                               	def customImage = docker.build("sa-logic:${env.BUILD_ID}")
+                               	customImage.push()
+                       	}
+                    }
                 }
             }
         }
